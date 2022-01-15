@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html id ="htmlid" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="documents/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="documents/files/firstpage.css">
+    <title>The Perfect Memory Game</title>
+</head>
+<body>
+         <video playsinline autoplay muted loop id="myVideo">
+        <source src="documents/video/Falling.webm" type="video/webm">
+        
+        Your browser does not support HTML5 video.
+      </video>
+      <audio  id="audioPlayer" src="documents/audio/DiscoTune.mp3"></audio>
+      <audio loop id="musicPlayer" src="documents/audio/DiscoTune.mp3"></audio>
+   
+      
+    <h2 class="animated">The Perfect</h1>
+    <h1 id ="memorygameheader" class="animated">Memory Game</h1>
+    <div class="container default">
+        <div id="button1" class="btn" onclick="secondPageSingleplayer()"><a  href="#">Single Player</a></div>
+        <div id="button2" class="btn" onclick="secondPageMultiplayer()"><a href="#">Multi Player</a></div>
+        <!-- <div class="btn"><a href="#">Read more</a></div> -->
+    </div>
+    
+    <div class="container container1">
+      <div id ="menuIcon" class="btn btn1"><a style="color: rgb(0, 132, 255);"class="material-icons" href="#">menu_open</a></div>
+      <div id ="leaderboardIcon" class="btn btn1 btn2 btn3"><a style="color: #d69e2e;" class="material-icons"href="#">emoji_events</a></div>
+      <div id ="musicIcon" class="btn btn1 btn2"><a style="color: rgb(51, 255, 0);" class="material-icons"href="#">music_note</a></div>
+      <div id ="soundIcon" class="btn btn1 btn2"><a style="color: rgb(255, 0, 0);" class="material-icons"href="#">volume_up</a></div>
+  </div>
+  <div id="menubody" class="menubody">
+  <div id="menucontid" class="menucont">
+    <div id="menucard" class="menucard">
+      <h2 id ="cardHeader"> Magical Menu</h2>
+      <div class="menucontent2">
+        <h3>How To Play</h3>
+        <p>- Choose two cards at a time and try to find identical cards.</p>
+        <p>- If the two cards are identical then the two cards will be removed</p>
+        <p>- If multi player is selected then each player has a turn to choose</p>
+        <p>- The player wins if he found all cards at the shortest avilable time</p>
+        <p>- If the two player spent identical time the score will determine the winner
+        </p>
+      </div>
+      <div id="menucontentid"class="menucontent">
+        
+        <form action="">
+          <div class="themescontainer">
+            <label for="themes">Themes</label>
+            <input checked type="radio" class="radio radiotheme" name="themes" id="themes1" value="conan">
+            <input type="radio" class="radio radiotheme" name="themes" id="themes2" value="deathnote">
+            <input type="radio" class="radio radiotheme" name="themes" id="themes3"value="avengers">
+          </div>
+          <div class="colorContainer">
+            <label for="colors">color</label>
+            <input type="color" class="colorstyling othermenu" name="colors" id="colors">
+          </div>
+          <div class="musicbar">
+            <label for="musicslider">music</label>
+            <input class="range ltpurple othermenu" type="range"min="0" max="1" step="0.1" value="0.5" name="musicslider" id="musicslider">
+          </div>
+          <div class="soundbar">
+            <label for="soundslider">sound</label>
+            <input class="range ltpurple othermenu" min="0" max="1" step="0.1" value="0.5"type="range" name="soundslider" id="soundslider">
+          </div>
+          
+          <div class="diffcontainer">
+            <label for="diff">Difficulty</label>
+            <input  type="radio" class="radio radiodiff" name="diff" id="diff1"value="easy">
+            <input checked type="radio" class="radio radiodiff" name="diff" id="diff2"value="medium">
+            <input type="radio" class="radio radiodiff" name="diff" id="diff3" value="hard">
+          </div>
+          <a id ="cancel"class="returnbtn material-icons" href="#">cancel</a>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div id="leaderbody" class="leaderbody">
+    <div id="leadercontid" class="leadercont">
+        <div id="leadercard" class="leadercard">
+            <h2 id="leaderHeader">LeaderBoard</h2>
+            <div id="leadercontentid" class="leadercontent">
+                <div>
+                    <table>
+                        <tr class="tr">
+                            <td>
+                                <h1 class="head">NAME</h1>
+                            </td>
+                            <td>
+                                <h1 class="head">SCORE</h1>
+                            </td>
+                            
+                        </tr>
+                        <tr class="tr2">
+                            <td id="leaderboardFirsPageName">
+                                <h1 id="demo" class="score">Ahmed</h1>
+                                <h1 id="demo" class="score">ghg</h1>
+                                <h1 id="demo" class="score"></h1>
+                                <h1 id="demo" class="score"></h1>
+                                <h1 id="demo" class="score"></h1>
+                            </td>
+                            <td id="leaderboardFirsPageScore">
+                                <h1 id="demo1" class="score">50</h1>
+                                <h1 id="demo1" class="score">56</h1>
+                                <h1 id="demo" class="score"></h1>
+                                <h1 id="demo" class="score"></h1>
+                                <h1 id="demo" class="score"></h1>
+                            </td>
+                           
+                        </tr>
+                    </table>
+                </div>
+                <a id="cancel2" class="returnbtn2 material-icons" href="#">cancel</a>
+            </div>
+        </div>
+    </div>
+    </div>
+<script src="documents/files/firstpage.js"></script>
+<script src="documents/files/tilt.js"></script>
+<script src="main.js"></script>
+<script>
+ leaderboardFirsPageName=document.getElementById("leaderboardFirsPageName");
+ leaderboardFirsPageScore=document.getElementById("leaderboardFirsPageScore");
+
+  leaderboardFirsPageName.innerHTML="";
+  leaderboardFirsPageScore.innerHTML="";
+    for (var elem in localStorage) {
+       if(elem!="difficultyLevel"&&
+        elem!="ThemeValue"&&elem!="pickedColor"&&
+        elem!="radiolevel"&&elem!="firstPlayeName"&&elem!="secondplayername"
+        &&elem!="soloPlayer"&&elem!="pausingFlag") 
+        {
+            if (localStorage.getItem(elem) != null) {
+              console.log("elem");
+                leaderboardFirsPageName.innerHTML+=`<h1 class="score">${elem}</h1>`
+                leaderboardFirsPageScore.innerHTML+=`<h1  class="score">${localStorage.getItem(elem)}</h1>`
+            }
+        }
+    } 
+
+
+</script>
+
+</body>
+</html>
